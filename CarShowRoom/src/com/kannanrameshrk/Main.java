@@ -22,8 +22,18 @@ public class Main {
 			System.out.println(" 1.Admin\n 2.User \n 3.Exit");
 			System.out.println("Enter your Option:");
 			System.out.println("-------------------");
-			int chioce= s.nextInt();
-				switch(chioce)
+			int choice = 0;
+			while (true) {
+			    if (s.hasNextInt()) {
+			        choice = s.nextInt();
+			        break;
+			    } else {
+			        s.next();
+			        System.out.println("Invalid input! Please enter a valid number:");
+			    }
+			}
+			
+				switch(choice)
 				{
 					case 1:
 					{

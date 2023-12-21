@@ -30,7 +30,16 @@ public class CarView {
 				System.out.println(" 1.Customer Details\n 2.back");
 				System.out.println("Enter your option:");
 				System.out.println("-------------------");
-				int choice=input.nextInt();
+				int choice;
+				while (true) {
+				    if (input.hasNextInt()) {
+				        choice = input.nextInt();
+				        break;
+				    } else {
+				        input.next();
+				        System.out.println("Invalid input! Please enter a valid number:");
+				    }
+				}
 				
 				switch(choice) {
 				case 1:{

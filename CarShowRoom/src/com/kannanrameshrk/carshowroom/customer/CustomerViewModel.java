@@ -28,7 +28,7 @@ class CustomerViewModel {
 	}
 
 	private boolean carNameIsValid(String carName) {
-		if(carName.length()>=3 && carName.length()<10 && !carName.matches("d")) {
+		if(carName.length()>=3 && carName.length()<10 && !carName.matches(".*\\\\d.*")) {
 			return true;
 		}
 		return false;

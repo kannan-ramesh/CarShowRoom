@@ -22,8 +22,17 @@ public class CustomerView {
 				System.out.println(" 1.Purchase Car \n 2.Car Details \n 3.Back");
 				System.out.println("Enter your option:");
 				System.out.println("-------------------");
-				int chioce=s.nextInt();
-					switch(chioce)
+				int choice;
+				while (true) {
+				    if (s.hasNextInt()) {
+				        choice = s.nextInt();
+				        break;
+				    } else {
+				        s.next();
+				        System.out.println("Invalid input! Please enter a valid number:");
+				    }
+				}
+					switch(choice)
 					{
 						case 1:
 						{
