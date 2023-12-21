@@ -28,7 +28,7 @@ public class Main {
 					case 1:
 					{
 						CarView carview =new CarView(); 
-						carview.start();
+						carview.start(s);
 						break;
 					}
 					case 2:
